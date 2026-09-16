@@ -105,9 +105,16 @@
       place-items: center;
 
       background: var(--green);
-      color: var(--gold);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
 
-      font-size: 22px;
+    .brand-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 50%;
     }
 
     .brand strong {
@@ -315,7 +322,8 @@
       color: rgba(255,255,255,.05);
     }
 
-    .food-circle {
+    .food-circle,
+    .hero-food-image {
       position: absolute;
 
       width: 250px;
@@ -328,39 +336,34 @@
 
       border-radius: 50%;
 
-      background:
-        radial-gradient(
-          circle at 50% 50%,
-          #8c5a30 0 15%,
-          transparent 16%
-        ),
-        radial-gradient(
-          circle at 28% 32%,
-          #779647 0 8%,
-          transparent 9%
-        ),
-        radial-gradient(
-          circle at 68% 30%,
-          #a3bb61 0 8%,
-          transparent 9%
-        ),
-        radial-gradient(
-          circle at 34% 70%,
-          #d3a33e 0 7%,
-          transparent 8%
-        ),
-        radial-gradient(
-          circle at 70% 68%,
-          #ad5a38 0 7%,
-          transparent 8%
-        ),
-        #e9ddbc;
-
+      background: #e9ddbc;
       border: 18px solid #eee3c8;
-
       box-shadow:
         0 30px 50px rgba(0,0,0,.3),
         inset 0 0 0 5px rgba(0,0,0,.05);
+    }
+
+    .hero-food-image {
+      object-fit: cover;
+      border-radius: 50%;
+      width: 250px;
+      height: 250px;
+      position: absolute;
+      left: 50%;
+      top: 48%;
+      transform: translate(-50%,-50%);
+      border: 18px solid #eee3c8;
+      box-shadow: 0 30px 50px rgba(0,0,0,.3);
+    }
+
+    .menu-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-bottom: 15px;
+      background: var(--cream);
+      display: block;
     }
 
     .hero-card-content {
@@ -1053,7 +1056,8 @@
         min-height: 350px;
       }
 
-      .food-circle {
+      .food-circle,
+    .hero-food-image {
         width: 210px;
         height: 210px;
       }
@@ -1077,7 +1081,7 @@
     <a href="#" class="brand">
 
       <div class="brand-logo">
-        🌿
+        <img src="logopecelponorogo.jpeg" alt="Logo Pecel Ponorogo Rewwin">
       </div>
 
       <div>
@@ -1164,7 +1168,7 @@
 
     <div class="hero-card">
 
-      <div class="food-circle"></div>
+      <img src="pecelori.jpeg" alt="Nasi Pecel Original" class="hero-food-image">
 
       <div class="hero-card-content">
 
@@ -1228,9 +1232,7 @@
 
         <article class="menu-card">
 
-          <div class="menu-symbol">
-            🍚
-          </div>
+          <img src="peceloriginalhorizontal.jpeg" alt="Nasi Pecel Original" class="menu-image">
 
           <h4>
             Nasi Pecel Original
@@ -1283,9 +1285,7 @@
 
         <article class="menu-card">
 
-          <div class="menu-symbol">
-            🍳
-          </div>
+          <img src="peceltelurdadarhorizontal.jpeg" alt="Telur Dadar" class="menu-image">
 
           <h4>
             Telur Dadar
@@ -1314,9 +1314,7 @@
 
         <article class="menu-card">
 
-          <div class="menu-symbol">
-            🍢
-          </div>
+          <img src="peceltempehorizontal.jpeg" alt="Tempe Menjes" class="menu-image">
 
           <h4>
             Tempe Menjes
@@ -1345,9 +1343,7 @@
 
         <article class="menu-card">
 
-          <div class="menu-symbol">
-            🌽
-          </div>
+          <img src="peceldadarjagunghorizontal.jpeg" alt="Dadar Jagung" class="menu-image">
 
           <h4>
             Dadar Jagung
@@ -1376,9 +1372,7 @@
 
         <article class="menu-card">
 
-          <div class="menu-symbol">
-            🍗
-          </div>
+          <img src="pecelayamhorizontal.jpeg" alt="Ayam" class="menu-image">
 
           <h4>
             Ayam
@@ -1407,9 +1401,7 @@
 
         <article class="menu-card">
 
-          <div class="menu-symbol">
-            🥚
-          </div>
+          <img src="peceltelurbalihorizontal.jpeg" alt="Telur Bali" class="menu-image">
 
           <h4>
             Telur Bali
@@ -1438,9 +1430,7 @@
 
         <article class="menu-card">
 
-          <div class="menu-symbol">
-            ◉
-          </div>
+          <img src="peceltahubalihorizontal.jpeg" alt="Tahu Bali" class="menu-image">
 
           <h4>
             Tahu Bali
@@ -1469,9 +1459,7 @@
 
         <article class="menu-card">
 
-          <div class="menu-symbol">
-            🍳
-          </div>
+          <img src="peceltelurceplokhorizontal.jpeg" alt="Telur Ceplok" class="menu-image">
 
           <h4>
             Telur Ceplok
@@ -1520,9 +1508,7 @@
 
         <article class="menu-card">
 
-          <div class="menu-symbol">
-            🥜
-          </div>
+          <img src="bubupecelsetengahkilo.jpeg" alt="" class="menu-image">
 
           <h4>
             Bumbu Pecel ½ Kg
@@ -1554,9 +1540,7 @@
 
         <article class="menu-card">
 
-          <div class="menu-symbol">
-            🥜
-          </div>
+          <img src="bumbupecelsatukg.jpeg" alt="Bumbu Pecel 1 Kg" class="menu-image">
 
           <h4>
             Bumbu Pecel 1 Kg
